@@ -12,7 +12,6 @@ const Login = (props) => {
 
 
   //Récuperation props Token Id depuis app
-  const userData = props.userData;
   const setUserData = props.setUserData;
 
   //Récuperation des props utilitaires

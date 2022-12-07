@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Login from "./Login";
 import Register from "./Register";
-import MainTitle from "../UI/titles/MainTitle";
+import Logo from "../../img/logo_co.png"
 
 const Main = (props) => {
 
@@ -32,7 +32,7 @@ const Main = (props) => {
 
   return (
     <div className="container-connexion d-flex align-items-center justify-content-center flex-column p-3">
-      <MainTitle />
+      <img src={Logo} alt="logo de l'entreprise Groupomania en forma png" className="logo_co"></img>
       <ul className="container-fluid d-flex align-items-center justify-content-center flex-row">
         <li
           onClick={handleModals}

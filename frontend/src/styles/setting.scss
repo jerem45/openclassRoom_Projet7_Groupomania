@@ -7,6 +7,14 @@ $transition-set : 0.3s ease-in 0.1s;
     height: 100px;
     object-fit: cover;
 }
+.logo_co{
+    width: 250px;
+    height: 70px;
+    object-fit: cover;
+    background-color:#FD2D01;
+    border-radius: 1rem;
+    padding: 1rem;
+}
 .text-primary-color{
   color:$red-color;
 }
