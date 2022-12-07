@@ -1,0 +1,102 @@
+$base-radius : 0.2rem;
+$red-color : #FD2D01;
+$black-color: #4E5166;
+$transition-set : 0.3s ease-in 0.1s;
+
+.text-primary-color{
+  color:$red-color;
+}
+.text-secondary-color{
+    color:$black-color;
+}
+.h-vh-100{
+height: 100vh;
+}
+.h-vh-60{
+    height: 60vh;
+    }
+.bg-grey{
+    background-color: rgba(206, 206, 206, 0.575);
+}
+.bg-grey-1{
+    background-color: rgba(173, 171, 171, 0.290);
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.post-border{
+    border-top: solid $red-color 3px;
+}
+li{
+    list-style: none;
+}
+.btn-primary-color{
+    background-color: $black-color;
+    color: white;
+    border:none;
+    border-radius: $base-radius;
+}
+.btn-secondary-color{
+    background-color:  $red-color;;
+    color: white;
+    border:none;
+    border-radius: $base-radius;
+}
+.btn-profil-color{
+    background-color: $black-color;
+    color: white;
+    border:none;
+    border-radius: $base-radius;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.btn-liked-color{
+   border: none;
+   background-color: inherit;
+}
+//connexion
+
+.bg-img-co{
+    background-image: url("../img/connexion.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.container-connexion{
+    width: 500px;
+    background-color: rgba(255, 255, 255, 0.884);
+}
+//nav
+
+.nav-hover-link:hover{
+    background-color: #FD2D01;
+    padding: 0.5rem;
+    border-radius: $base-radius;
+    transition: 0.1s ease 0.1s;
+     span,.icon{
+        color: white;
+     }
+}
+//home
+.w-img-post{
+    width: 5rem;
+    height: 5rem;
+}
+
+//activeProfil
+.img-profil-size{
+    width: 10rem;
+    height: 10rem;
+}
+.profil-icon{
+    font-size: 8rem;
+    margin-top: 2rem;
+    color: #cc5945ad;
+}
+.postImg{
+    width: 100px;
+    height: 80px;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+}
