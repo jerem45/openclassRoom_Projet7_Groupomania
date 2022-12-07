@@ -18,7 +18,7 @@ const Header = (props) => {
   }
 
   return (
-    <div className="d-flex flex-row justify-content-evenly align-items-center container-fluid p-3 bg-grey flex-wrap">
+    <div className="d-flex flex-row justify-content-evenly align-items-center container-fluid p-3 bg-white flex-wrap">
       <MainTitle />
       <div className="d-flex justify-content-center align-items-center fs-5 flex-wrap">
          <Link to={homeUrl}  className="me-3 nav-hover-link text-decoration-none">

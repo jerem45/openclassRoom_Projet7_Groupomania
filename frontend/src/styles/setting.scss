@@ -2,7 +2,11 @@ $base-radius : 0.2rem;
 $red-color : #FD2D01;
 $black-color: #4E5166;
 $transition-set : 0.3s ease-in 0.1s;
-
+.main_Logo{
+    width: 250px;
+    height: 100px;
+    object-fit: cover;
+}
 .text-primary-color{
   color:$red-color;
 }
@@ -19,7 +23,7 @@ height: 100vh;
     background-color: rgba(206, 206, 206, 0.575);
 }
 .bg-grey-1{
-    background-color: rgba(173, 171, 171, 0.290);
+    background-color: rgba(173, 171, 171, 0.082);
 }
 .cursor-pointer{
     cursor: pointer;

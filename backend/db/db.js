@@ -6,7 +6,7 @@ const result = dotenv.config();
 //connection a la base de donnée de façon securiser grace au variable d'environement
 mongoose
   .connect(
-    `mongodb+srv://jeremyalleau91:groupomania@cluster0.dmng5jj.mongodb.net/?retryWrites=true&w=majority`,
+    `mongodb+srv://${process.env.DB_ACCESS}.mongodb.net/?retryWrites=true&w=majority`,
     { useNewUrlParser: true, useUnifiedTopology: true }
   )
   .then(() => {

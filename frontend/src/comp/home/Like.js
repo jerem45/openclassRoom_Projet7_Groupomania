@@ -41,8 +41,9 @@ const handleLiked = (e)=>{
 
 const handleDisLiked = (e)=>{
  if(userLike[0].likeActive){
+ 
+  isDisliked() 
   isLiked() 
-  isDisliked()
  }
 isDisliked()
 sendDislike()
@@ -86,12 +87,12 @@ const sendDislike =(event)=>{
         Authorization: `Bearer ${props.token}`,
       },
       data: {
-        dislikes: 1,
+        dislikes: userDislike[0].dislike,
         userId : props.userData
       },
     })
       .then((res) => {
-        if (res.status === 200) {
+        if (res.status === 201) {
           getRequestHome()
   
           } else {
@@ -110,14 +111,14 @@ const sendDislike =(event)=>{
     className='btn-liked-color me-3 text-danger'
     onClick={()=>handleLiked()}>
         <FontAwesomeIcon icon={faHeart} 
-         className="me-1" />{props.liked} {userLike[0].like}
+         className="me-1" />{props.liked} 
     </button>
     <button 
     className='btn-liked-color'
     onClick={()=>handleDisLiked()}>
 
         <FontAwesomeIcon icon={faHeartBroken} 
-         className="me-1" />{props.disliked}{userDislike[0].dislike}
+         className="me-1" />{props.disliked}
     </button>
 </div>
   )
