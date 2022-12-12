@@ -12,9 +12,7 @@ export default function ActiveHome(props) {
   const userPost = props.userPost
   const setUserPost = props.setUserPost
   const allDataUser= props.allDataUser[0].value
-  console.log(allDataUser);
-  console.log("userPostValue");
-  console.log(userPostValue);
+
   //state du poste cree par l'utilisateur
   const [post,setPost] = useState()
 
@@ -53,15 +51,14 @@ const getUserControlData =(event)=>{
       });
 }
 
-  //fonction de récupération de la valeur de l'input
-  function handlePostUser(e){
+//fonction de récupération de la valeur de l'input
+function handlePostUser(e){
     setPost(
       e.target.value
     )
     }
 
-
-
+    
 // boucle pour afficher les posts
 const cards = Object
 .keys(userPostValue)

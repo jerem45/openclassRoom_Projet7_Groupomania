@@ -13,8 +13,8 @@ const Home = (props) => {
     {value : []}
   ])
 
-   //State qui définis l'acces a la fonctionnalité de poster des messages ou non  
-   const [access, setAccess]= useState([{value:false}])
+  //State qui définis l'acces a la fonctionnalité de poster des messages ou non  
+  const [access, setAccess]= useState([{value:false}])
 
   //State de récupération de toutes la Data contenus dans le profil de l'utilisateur
   const [allDataUser,setAllDataUser] = useState([{value:[]}])
@@ -46,7 +46,8 @@ const Home = (props) => {
             console.log(err);
           });
       }
-  function getUserControlData(){
+        //requête de control pour afficher ou non emptyhome ou activehome
+      function getUserControlData(){
     axios({
         method: "get",
         url: `${process.env.REACT_APP_URL}api/profil/${userData[1].id}`,
@@ -86,7 +87,8 @@ const Home = (props) => {
         .catch((err) => {
           console.log(err);
         });
-  }
+      }
+
    //didMount
    useEffect(() => {
     getRequestHome();

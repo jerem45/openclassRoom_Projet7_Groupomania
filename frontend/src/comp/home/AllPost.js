@@ -22,15 +22,12 @@ export default function AllPost(props) {
   const getRequestHome = props.getRequestHome
 
   //récuperation de la condition d'affichage des like avec le compo parent EmptyHome
-const conditionLike = props.displayLike
-
-
+  const conditionLike = props.displayLike
 
   const handleChange_modifPost = (event) => {
     setPostModif(event.target.value);
   };
-  //state de validation
-  // const  access=props.access[0].value
+
   //conversion de la date des postes
   const dayName = new Date(props.detail.createdAt).toLocaleDateString('fr-FR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'});
 
@@ -69,6 +66,7 @@ function displayLike (){
 return <Like userData={userData} token={props.token} objetctId={objetctId} getRequestHome={getRequestHome} liked={props.detail.likes} disliked={props.detail.dislikes}/>
   }
 }
+//axios modification du poste et !!!on utilise l'objectid dans l'url de la requête!
 function putModifPost(e) {
   e.preventDefault();
   axios({
@@ -152,9 +150,7 @@ function putModifPost(e) {
     )
   }
 
-
-  
-  //Condition de modification du block
+//Condition de modification du block
   const controlModif = ()=>{
     if(clikedBtn===true){
       return modifBlock()
@@ -163,6 +159,7 @@ function putModifPost(e) {
     }
     
   }
+  //did mount
 useEffect(()=>{
 postAccess()
 
@@ -170,8 +167,8 @@ postAccess()
 },[])
 
   //JSX
-  return (
 
+  return (
     <div className="container p-2  my-3">
     <div className='container d-flex flex-row justify-content-center align-items-center flex-wrap bg-grey-1'>
       <div className='w-img-post p-0 m-0'>

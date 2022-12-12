@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-pascal-case */
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Form from "./Form";
 import axios from "axios";
@@ -19,16 +19,6 @@ const Login = (props) => {
   const navigate = useNavigate();
   const propsBtn = props.button;
   const propsTitle = props.title;
-
-  //La fonction de récupération du id et token dans le state de login avant envoie au state de App
-  // function getUserData(addToken, addID) {
-  //   const newAxiosInfo = [...axiosInfo];
-  //   newAxiosInfo[0].axiosToken = addToken;
-  //   newAxiosInfo[1].axiosID = addID;
-  //   setAxiosInfo(newAxiosInfo);
-  //   console.log(" Apres la requete axiosInfo");
-  //   console.log(axiosInfo);
-  // }
 
   //Requêtes axios envoyer de la data
   const handleLogin = (e) => {

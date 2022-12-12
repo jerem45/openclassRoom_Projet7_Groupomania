@@ -59,6 +59,7 @@ function paramsProfil() {
   }, []);
   //[displayProfil, fetchData, userData]
 
+  //JSX
   if (displayProfil[0].status === false) {
     return (
          <div className="h-vh-100">

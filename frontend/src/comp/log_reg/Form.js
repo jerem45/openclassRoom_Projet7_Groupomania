@@ -2,7 +2,6 @@ import React from "react";
 import Button from "../UI/button/Button";
 
 const Form = (props) => {
-  const userData = props.userData;
   const setUserData = props.setUserData;
   const axiosData = props.axiosData;
 

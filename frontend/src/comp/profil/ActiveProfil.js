@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from "react";
 import ModifacationProfil from "../UI/modals/Modifacation_Profil";
 const ActiveProfil = (props) => {
