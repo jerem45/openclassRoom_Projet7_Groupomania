@@ -107,16 +107,13 @@ export default function FormModalProfil(props) {
 
   const handleImg = (e) => {
     e.preventDefault(); 
-    const fd = new FormData();
-      fd.append("images",imageUrl.selectedFile, imageUrl.selectedFile.name)
-    //   axios.post(`${process.env.REACT_APP_URL}api/profil`,fd)
-    //   .then(res=>{
-    //     console.log(res);
-    //   })
+    //ajout du form data pour l'envoi de l'image
+    const FD = new FormData();
+      FD.append("images",imageUrl.selectedFile, imageUrl.selectedFile.name)
     axios({
       method: "PUT",
       url: `${process.env.REACT_APP_URL}api/profil/${userData[1].id}`,
-      data : fd,
+      data : FD,
       headers: {
         Authorization: `Bearer ${userData[0].token}`,
       },
@@ -159,6 +156,7 @@ console.log(imageUrl.selectedFile);
 
   return (
     <div className="form__container--profil">
+      {/* le forulaire pour l'image */}
     <form
       className="container my-3 p-3"
       encType="multipart/form-data"
@@ -177,7 +175,7 @@ console.log(imageUrl.selectedFile);
       />
        <button className="btn-primary-color mt-3" value="Enregistrer" type="submit" >Enregistrer</button>
        </form>
-
+  {/* le forulaire pour le nom */}
        <form
       className="container my-3 p-3"
       encType="multipart/form-data"
@@ -198,7 +196,7 @@ console.log(imageUrl.selectedFile);
       ></input>
        <button className="btn-primary-color mt-3" value="Enregistrer" type="submit" >Enregistrer</button>
     </form>
-     
+       {/* le forulaire pour le job */}
     <form
       className="container my-3 p-3"
       encType="multipart/form-data"
@@ -219,7 +217,7 @@ console.log(imageUrl.selectedFile);
       />
        <button className="btn-primary-color mt-3" value="Enregistrer" type="submit" >Enregistrer</button>
     </form>
-
+  {/* le forulaire pour la bio */}
     <form
       className="container my-3 p-3"
       encType="multipart/form-data"
